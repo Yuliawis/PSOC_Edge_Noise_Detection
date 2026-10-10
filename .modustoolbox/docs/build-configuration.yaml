@@ -1,0 +1,270 @@
+# ModusToolbox Build Configuration Analysis for AI Agents
+# This document provides structured information about the build configuration of the ModusToolbox workspace.
+# It is intended for use by AI agents to better understand the project's build setup.
+# 
+# Additional Notes:
+#  - The common_libraries and common_includes relative paths are relative to the project root and not workspace root.
+
+path_interpretation_rules:
+  common_paths_relative_to: Project Directory
+  project_directories:
+    - proj_cm33_s
+    - proj_cm33_ns
+    - proj_cm55
+  resolution_base: workspace_path + '/' + project_folder_name + '/' + relative_path
+  note: Use path normalization to collapse .. and . segments
+workspace_path: c:/Users/yuliya/Documents/PSOC_proj/PSOC_Edge_Reactive_Sound
+device_name: PSE846GPS2DBZC4A
+bsp_name: APP_KIT_PSE84_AI
+board_name: TARGET_APP_KIT_PSE84_AI
+bp_headers: []
+middleware_summary:
+  total_available: 156
+  total_used: 11
+  available_by_category:
+    Bluetooth®: 15
+    Core: 11
+    Graphics: 12
+    Middleware: 68
+    Peripheral: 37
+    Utilities: 6
+    Wi-Fi: 7
+  used_by_category:
+    Bluetooth®: 1
+    Core: 5
+    Middleware: 4
+    Peripheral: 1
+  notes:
+    - Use `list_available_libraries` MCP tool for complete catalog of available libraries and their summaries
+config_files:
+  - design.cyqspi
+  - design.modus
+common_libraries:
+  - id: bt-fw-mur-cyw55513
+    remote_uri: https://github.com/Infineon/bt-fw-mur-cyw55513
+    version_tag: release-v1.0.0
+    local_path: ../../mtb_shared/bt-fw-mur-cyw55513/release-v1.0.0
+  - id: core-make
+    remote_uri: https://github.com/cypresssemiconductorco/core-make
+    version_tag: release-v3.10.0
+    local_path: ../../mtb_shared/core-make/release-v3.10.0
+  - id: mtb-ipc
+    remote_uri: https://github.com/Infineon/mtb-ipc
+    version_tag: release-v1.2.0
+    local_path: ../../mtb_shared/mtb-ipc/release-v1.2.0
+  - id: se-rt-services-utils
+    remote_uri: https://github.com/Infineon/se-rt-services-utils
+    version_tag: release-v1.4.0
+    local_path: ../../mtb_shared/se-rt-services-utils/release-v1.4.0
+  - id: async-transfer
+    remote_uri: https://github.com/Infineon/async-transfer
+    version_tag: release-v1.1.1
+    local_path: ../../mtb_shared/async-transfer/release-v1.1.1
+  - id: cmsis
+    remote_uri: https://github.com/Infineon/cmsis
+    version_tag: release-v6.1.0
+    local_path: ../../mtb_shared/cmsis/release-v6.1.0
+  - id: core-lib
+    remote_uri: https://github.com/cypresssemiconductorco/core-lib
+    version_tag: release-v1.8.0
+    local_path: ../../mtb_shared/core-lib/release-v1.8.0
+  - id: device-db
+    remote_uri: https://github.com/Infineon/device-db
+    version_tag: release-v4.41.0
+    local_path: C:/Users/yuliya/.modustoolbox/global/device-db/release-v4.41.0
+  - id: mtb-dsl-pse8xxgp
+    remote_uri: https://github.com/Infineon/mtb-dsl-pse8xxgp
+    version_tag: release-v1.7.0
+    local_path: ../../mtb_shared/mtb-dsl-pse8xxgp/release-v1.7.0
+  - id: mtb-srf
+    remote_uri: https://github.com/Infineon/mtb-srf
+    version_tag: release-v1.2.1
+    local_path: ../../mtb_shared/mtb-srf/release-v1.2.1
+common_defines:
+  - '-DCOMPONENT_MW_MTB_DSL_PSE8XXGP'
+  - '-DCOMPONENT_MW_SE_RT_SERVICES_UTILS'
+  - '-DCYBSP_MCUBOOT_HEADER_SIZE=0x400'
+  - '-DCOMPONENT_WIFI_INTERFACE_SDIO'
+  - '-DCOMPONENT_55500A1'
+  - '-DCOMPONENT_APP_KIT_PSE84_AI'
+  - '-DCOMPONENT_MW_MTB_SRF'
+  - '-DCOMPONENT_PSE84'
+  - '-DFLASH_BOOT'
+  - '-DCOMPONENT_GCC_ARM'
+  - '-DCOMPONENT_MTB_DEVICE_SUPPORT'
+  - '-DCOMPONENT_MW_ASYNC_TRANSFER'
+  - '-DCOMPONENT_MW_BT_FW_MUR_CYW55513'
+  - '-DCOMPONENT_MW_CMSIS'
+  - '-DCOMPONENT_MW_MTB_IPC'
+  - '-DCY_SUPPORTS_DEVICE_VALIDATION'
+  - '-DTRXV5'
+  - '-DCOMPONENT_MTB_HAL'
+  - '-DCOMPONENT_MW_CORE_LIB'
+  - '-DCOMPONENT_SM'
+  - '-DTARGET_APP_KIT_PSE84_AI'
+  - '-DCOMPONENT_55500'
+  - '-DCOMPONENT_HCI_UART'
+  - '-DCOMPONENT_MURATA_2FY'
+  - '-DCY_PDL_FLASH_BOOT'
+  - '-DCOMPONENT_MW_CORE_MAKE'
+  - '-DCYBSP_WIFI_WL_HOSTWAKE_DRIVE_MODE=MTB_HAL_GPIO_DRIVE_OPENDRAINDRIVESLOW'
+  - '-DCYBSP_WIFI_WL_HOSTWAKE_INIT_STATE=WHD_TRUE'
+  - '-DCY_TARGET_BOARD=APP_KIT_PSE84_AI'
+  - '-DDEBUG'
+  - '-DPSE846GPS2DBZC4A'
+  - '-DBLHS_SUPPORT'
+  - '-DCY_WIFI_COUNTRY=WHD_COUNTRY_UNITED_STATES'
+  - '-DCOMPONENT_Debug'
+common_includes:
+  - //# Relative paths here are relative to each project directory. Not to workspace root.
+  - '-I../../mtb_shared/cmsis/release-v6.1.0/Core/Include/r-profile'
+  - '-I../../mtb_shared/mtb-dsl-pse8xxgp/release-v1.7.0/device-utils/syspm/hobto/pdm_pcm'
+  - '-I../../mtb_shared/mtb-dsl-pse8xxgp/release-v1.7.0/device-utils/syspm/hobto/pdm_pcm/mxpdm'
+  - '-I../../mtb_shared/mtb-dsl-pse8xxgp/release-v1.7.0/pdl/devices/include'
+  - '-I../../mtb_shared/se-rt-services-utils/release-v1.4.0'
+  - '-I../../mtb_shared/cmsis/release-v6.1.0/Core'
+  - '-I../../mtb_shared/mtb-dsl-pse8xxgp/release-v1.7.0/device-utils'
+  - '-I../../mtb_shared/mtb-dsl-pse8xxgp/release-v1.7.0/device-utils/syspm/include'
+  - '-I../../mtb_shared/mtb-dsl-pse8xxgp/release-v1.7.0/pdl/drivers'
+  - '-I../../mtb_shared/mtb-dsl-pse8xxgp/release-v1.7.0/pdl/drivers/third_party'
+  - '-I../../mtb_shared/mtb-ipc/release-v1.2.0/include'
+  - '-I../../mtb_shared/mtb-srf/release-v1.2.1/include'
+  - '-I../bsps/TARGET_APP_KIT_PSE84_AI'
+  - '-I../bsps'
+  - '-I../bsps/TARGET_APP_KIT_PSE84_AI/config'
+  - '-I../../mtb_shared/cmsis/release-v6.1.0/Core/Include'
+  - '-I../../mtb_shared/core-lib/release-v1.8.0'
+  - '-I../../mtb_shared/mtb-dsl-pse8xxgp/release-v1.7.0/device-utils/syspm/hobto/pdm_pcm/audioss_pdm'
+  - '-I../../mtb_shared/mtb-dsl-pse8xxgp/release-v1.7.0/pdl'
+  - '-I../../mtb_shared/mtb-dsl-pse8xxgp/release-v1.7.0/pdl/drivers/third_party/ethernet'
+  - '-I../bsps/TARGET_APP_KIT_PSE84_AI/bluetooth'
+  - '-I../../mtb_shared/cmsis/release-v6.1.0/Core/Include/a-profile'
+  - '-I../../mtb_shared/cmsis/release-v6.1.0/Core/Include/m-profile'
+  - '-I../../mtb_shared/core-lib/release-v1.8.0/include'
+  - '-I../../mtb_shared/mtb-dsl-pse8xxgp/release-v1.7.0/pdl/devices/include/ip'
+  - '-I../../mtb_shared/mtb-dsl-pse8xxgp/release-v1.7.0/pdl/drivers/include'
+  - '-I../../mtb_shared/mtb-ipc/release-v1.2.0'
+  - '-I../../mtb_shared/async-transfer/release-v1.1.1/include'
+  - '-I../../mtb_shared/mtb-dsl-pse8xxgp/release-v1.7.0/device-utils/syspm/hobto'
+  - '-I../../mtb_shared/mtb-dsl-pse8xxgp/release-v1.7.0/hal/include'
+  - '-I../../mtb_shared/mtb-srf/release-v1.2.1'
+  - '-I../bsps/TARGET_APP_KIT_PSE84_AI/config/GeneratedSource'
+  - '-I../../mtb_shared/async-transfer/release-v1.1.1'
+  - '-I../../mtb_shared/cmsis/release-v6.1.0'
+  - '-I../../mtb_shared/mtb-dsl-pse8xxgp/release-v1.7.0/device-utils/syspm'
+  - '-I../../mtb_shared/mtb-dsl-pse8xxgp/release-v1.7.0/pdl/drivers/third_party/ethernet/include'
+  - '-I../../mtb_shared/mtb-dsl-pse8xxgp/release-v1.7.0'
+  - '-I../../mtb_shared/mtb-dsl-pse8xxgp/release-v1.7.0/hal'
+  - '-I../../mtb_shared/mtb-dsl-pse8xxgp/release-v1.7.0/pdl/devices'
+common_sources:
+  - C:/Users/yuliya/Documents/PSOC_proj/mtb_shared/mtb-dsl-pse8xxgp/release-v1.7.0/pdl/drivers/source/*.c
+  - C:/Users/yuliya/Documents/PSOC_proj/mtb_shared/se-rt-services-utils/release-v1.4.0/*.c
+  - C:/Users/yuliya/Documents/PSOC_proj/mtb_shared/mtb-srf/release-v1.2.1/source/*.c
+  - C:/Users/yuliya/Documents/PSOC_proj/mtb_shared/mtb-dsl-pse8xxgp/release-v1.7.0/device-utils/syspm/source/*.c
+  - C:/Users/yuliya/Documents/PSOC_proj/PSOC_Edge_Reactive_Sound/bsps/TARGET_APP_KIT_PSE84_AI/config/GeneratedSource/*.c
+  - C:/Users/yuliya/Documents/PSOC_proj/mtb_shared/mtb-dsl-pse8xxgp/release-v1.7.0/pdl/drivers/source/TOOLCHAIN_GCC_ARM/*.S
+  - C:/Users/yuliya/Documents/PSOC_proj/mtb_shared/bt-fw-mur-cyw55513/release-v1.0.0/COMPONENT_MURATA-2FY/*.c
+  - C:/Users/yuliya/Documents/PSOC_proj/mtb_shared/mtb-dsl-pse8xxgp/release-v1.7.0/pdl/devices/source/*.c
+  - C:/Users/yuliya/Documents/PSOC_proj/mtb_shared/mtb-ipc/release-v1.2.0/source/*.c
+  - C:/Users/yuliya/Documents/PSOC_proj/mtb_shared/mtb-dsl-pse8xxgp/release-v1.7.0/hal/source/*.c
+  - C:/Users/yuliya/Documents/PSOC_proj/mtb_shared/async-transfer/release-v1.1.1/source/*.c
+  - C:/Users/yuliya/Documents/PSOC_proj/mtb_shared/mtb-dsl-pse8xxgp/release-v1.7.0/support/source/*.c
+  - C:/Users/yuliya/Documents/PSOC_proj/PSOC_Edge_Reactive_Sound/bsps/TARGET_APP_KIT_PSE84_AI/bluetooth/*.c
+  - C:/Users/yuliya/Documents/PSOC_proj/PSOC_Edge_Reactive_Sound/bsps/TARGET_APP_KIT_PSE84_AI/*.c
+  - C:/Users/yuliya/Documents/PSOC_proj/mtb_shared/mtb-dsl-pse8xxgp/release-v1.7.0/pdl/drivers/third_party/ethernet/src/*.c
+projects:
+  - project_name: proj_cm33_s
+    folder_name: c:/Users/yuliya/Documents/PSOC_proj/PSOC_Edge_Reactive_Sound/proj_cm33_s
+    core_id: CM33_0
+    core_type: CM33
+    build_system: GNU Make
+    libraries: []
+    compiler_defines:
+      - '//# AI hint: See also common_defines listed for workspace'
+      - '-DCOMPONENT_CM33'
+      - '-DCOMPONENT_CM33_0'
+      - '-DCOMPONENT_SECURE_DEVICE'
+      - '-DCOMPONENT_SECURE_DRIVERS'
+      - '-DCOMPONENT_SOFTFP'
+      - '-DCORE_NAME_CM33_0=1'
+      - '-DCY_APPNAME_proj_cm33_s'
+    sources:
+      - '//# AI hint: See also common_sources listed for workspace'
+      - C:/Users/yuliya/Documents/PSOC_proj/PSOC_Edge_Reactive_Sound/bsps/TARGET_APP_KIT_PSE84_AI/COMPONENT_CM33/COMPONENT_SECURE_DEVICE/*.c
+      - C:/Users/yuliya/Documents/PSOC_proj/PSOC_Edge_Reactive_Sound/proj_cm33_s/*.c
+      - C:/Users/yuliya/Documents/PSOC_proj/mtb_shared/mtb-dsl-pse8xxgp/release-v1.7.0/nnkernel/COMPONENT_CM33/source/*.c
+    include_dirs:
+      - '//# AI hint: See also common_includes listed for workspace'
+      - '-I../../mtb_shared/mtb-dsl-pse8xxgp/release-v1.7.0/nnkernel'
+      - '-I../../mtb_shared/mtb-dsl-pse8xxgp/release-v1.7.0/nnkernel/COMPONENT_CM33'
+      - '-I../../mtb_shared/mtb-dsl-pse8xxgp/release-v1.7.0/nnkernel/COMPONENT_CM33/include'
+      - '-I../bsps/TARGET_APP_KIT_PSE84_AI/COMPONENT_CM33'
+      - '-I../bsps/TARGET_APP_KIT_PSE84_AI/COMPONENT_CM33/COMPONENT_SECURE_DEVICE'
+    exclude_files: null
+  - project_name: proj_cm33_ns
+    folder_name: c:/Users/yuliya/Documents/PSOC_proj/PSOC_Edge_Reactive_Sound/proj_cm33_ns
+    core_id: CM33_0
+    core_type: CM33
+    build_system: GNU Make
+    libraries:
+      - id: retarget-io
+        remote_uri: https://github.com/cypresssemiconductorco/retarget-io
+        version_tag: release-v1.10.0
+        local_path: ../../mtb_shared/retarget-io/release-v1.10.0
+    compiler_defines:
+      - '//# AI hint: See also common_defines listed for workspace'
+      - '-DCOMPONENT_CM33'
+      - '-DCOMPONENT_CM33_0'
+      - '-DCOMPONENT_MW_RETARGET_IO'
+      - '-DCOMPONENT_NON_SECURE_DEVICE'
+      - '-DCOMPONENT_SOFTFP'
+      - '-DCORE_NAME_CM33_0=1'
+      - '-DCY_APPNAME_proj_cm33_ns'
+      - '-DCY_RETARGET_IO_CONVERT_LF_TO_CRLF'
+    sources:
+      - '//# AI hint: See also common_sources listed for workspace'
+      - C:/Users/yuliya/Documents/PSOC_proj/PSOC_Edge_Reactive_Sound/bsps/TARGET_APP_KIT_PSE84_AI/COMPONENT_CM33/COMPONENT_NON_SECURE_DEVICE/*.c
+      - C:/Users/yuliya/Documents/PSOC_proj/PSOC_Edge_Reactive_Sound/proj_cm33_ns/*.c
+      - C:/Users/yuliya/Documents/PSOC_proj/mtb_shared/mtb-dsl-pse8xxgp/release-v1.7.0/nnkernel/COMPONENT_CM33/source/*.c
+      - C:/Users/yuliya/Documents/PSOC_proj/mtb_shared/mtb-srf/release-v1.2.1/source/COMPONENT_NON_SECURE_DEVICE/*.c
+      - C:/Users/yuliya/Documents/PSOC_proj/mtb_shared/mtb-srf/release-v1.2.1/source/COMPONENT_NON_SECURE_DEVICE/COMPONENT_MW_MTB_IPC/*.c
+      - C:/Users/yuliya/Documents/PSOC_proj/mtb_shared/retarget-io/release-v1.10.0/source/*.c
+    include_dirs:
+      - '//# AI hint: See also common_includes listed for workspace'
+      - '-I.'
+      - '-I../../mtb_shared/mtb-dsl-pse8xxgp/release-v1.7.0/nnkernel'
+      - '-I../../mtb_shared/mtb-dsl-pse8xxgp/release-v1.7.0/nnkernel/COMPONENT_CM33'
+      - '-I../../mtb_shared/mtb-dsl-pse8xxgp/release-v1.7.0/nnkernel/COMPONENT_CM33/include'
+      - '-I../../mtb_shared/mtb-srf/release-v1.2.1/include/COMPONENT_NON_SECURE_DEVICE'
+      - '-I../../mtb_shared/mtb-srf/release-v1.2.1/include/COMPONENT_NON_SECURE_DEVICE/COMPONENT_MW_MTB_IPC'
+      - '-I../../mtb_shared/retarget-io/release-v1.10.0'
+      - '-I../../mtb_shared/retarget-io/release-v1.10.0/include'
+    exclude_files: null
+  - project_name: proj_cm55
+    folder_name: c:/Users/yuliya/Documents/PSOC_proj/PSOC_Edge_Reactive_Sound/proj_cm55
+    core_id: CM55_0
+    core_type: CM55
+    build_system: GNU Make
+    libraries: []
+    compiler_defines:
+      - '//# AI hint: See also common_defines listed for workspace'
+      - '-DCOMPONENT_CM55'
+      - '-DCOMPONENT_CM55_0'
+      - '-DCOMPONENT_HARDFP'
+      - '-DCOMPONENT_NON_SECURE_DEVICE'
+      - '-DCORE_NAME_CM55_0=1'
+      - '-DCY_APPNAME_proj_cm55'
+      - '-DCY_RETARGET_IO_CONVERT_LF_TO_CRLF'
+    sources:
+      - '//# AI hint: See also common_sources listed for workspace'
+      - C:/Users/yuliya/Documents/PSOC_proj/PSOC_Edge_Reactive_Sound/bsps/TARGET_APP_KIT_PSE84_AI/COMPONENT_CM55/COMPONENT_NON_SECURE_DEVICE/*.c
+      - C:/Users/yuliya/Documents/PSOC_proj/PSOC_Edge_Reactive_Sound/proj_cm55/*.c
+      - C:/Users/yuliya/Documents/PSOC_proj/mtb_shared/mtb-srf/release-v1.2.1/source/COMPONENT_NON_SECURE_DEVICE/*.c
+      - C:/Users/yuliya/Documents/PSOC_proj/mtb_shared/mtb-srf/release-v1.2.1/source/COMPONENT_NON_SECURE_DEVICE/COMPONENT_MW_MTB_IPC/*.c
+    include_dirs:
+      - '//# AI hint: See also common_includes listed for workspace'
+      - '-I../../mtb_shared/mtb-srf/release-v1.2.1/include/COMPONENT_NON_SECURE_DEVICE'
+      - '-I../../mtb_shared/mtb-srf/release-v1.2.1/include/COMPONENT_NON_SECURE_DEVICE/COMPONENT_MW_MTB_IPC'
+    exclude_files: null
+summary: ''
+
