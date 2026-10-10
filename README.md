@@ -98,20 +98,3 @@ See the [ModusToolbox&trade; tools package installation guide](https://www.infin
 Install a terminal emulator if you do not have one. Instructions in this document use [Tera Term](https://teratermproject.github.io/index-en.html).
 
 This example requires no additional software or tools.
-
-
-## Operation
-
-See [Using the code example](docs/using_the_code_example.md) for instructions on creating a project, opening it in various supported IDEs, and performing tasks, such as building, programming, and debugging the application within the respective IDEs.
-
-1. Connect the board to your PC using the provided USB cable through the KitProg3 USB connector
-
-2. Open a terminal program and select the KitProg3 COM port. Set the serial port parameters to 8N1 and 115200 baud
-
-3. After programming, the application starts automatically. Confirm that "PSOC Edge MCU: Sound-controlled LEDs" is displayed on the UART terminal
-
-   **Figure 1. Terminal output on program startup**
-
-   ![](images/terminal-output.png)
-
-4. Confirm that the kit 'User LED1' blinks at approximately 1 Hz
