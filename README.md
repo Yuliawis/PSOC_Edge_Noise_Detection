@@ -2,15 +2,6 @@
 
 This application uses an Arm&reg; Cortex&reg;-M33 CPU on PSOC&trade; Edge MCU to provide terminal-selectable LED blinking and microphone-controlled LED brightness.
 
-This code example has a three project structure: CM33 secure, CM33 non-secure, and CM55 projects. All three projects are programmed to the external QSPI flash and executed in Execute in Place (XIP) mode. Extended boot launches the CM33 secure project from a fixed location in the external flash, which then configures the protection settings and launches the CM33 non-secure application. Additionally, CM33 non-secure application enables CM55 CPU and launches the CM55 application.
-> **Note:** On the KIT_PSE84_HMI, all three projects are programmed to the external OSPI flash instead of QSPI.
-
-
-[Provide feedback on this code example.](https://yourvoice.infineon.com/jfe/form/SV_1NTns53sK2yiljn?Q_EED=eyJVbmlxdWUgRG9jIElkIjoiQ0UyMzg1NDEiLCJTcGVjIE51bWJlciI6IjAwMi0zODU0MSIsIkRvYyBUaXRsZSI6IlBTT0MmdHJhZGU7IEVkZ2UgTUNVOiBIZWxsbyB3b3JsZCIsInJpZCI6ImhpbWFuc2h1LnNoZWtoYXJAaW5maW5lb24uY29tIiwiRG9jIHZlcnNpb24iOiIyLjEuMCIsIkRvYyBMYW5ndWFnZSI6IkVuZ2xpc2giLCJEb2MgRGl2aXNpb24iOiJNQ0QiLCJEb2MgQlUiOiJJQ1ciLCJEb2MgRmFtaWx5IjoiUFNPQyJ9)
-
-See the [Design and implementation](docs/design_and_implementation.md) for the functional description of this code example.
-
-
 ## Sound-controlled LED modes
 
 The CM33 non-secure application starts in the original blink mode. Connect the
@@ -90,11 +81,5 @@ Ensure the following jumper and pin configuration on board.
 - J20 and J21 must be in the tristate/not connected (NC) position for the PSOC&trade; Edge E84 Evaluation Kit
 
 > **Note:** This hardware setup is not required for KIT_PSE84_AI.
-
-## Software setup
-
-See the [ModusToolbox&trade; tools package installation guide](https://www.infineon.com/ModusToolboxInstallguide) for information about installing and configuring the tools package.
-
-Install a terminal emulator if you do not have one. Instructions in this document use [Tera Term](https://teratermproject.github.io/index-en.html).
 
 This example requires no additional software or tools.
