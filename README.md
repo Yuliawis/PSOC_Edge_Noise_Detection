@@ -76,23 +76,6 @@ The onboard microphone controls the brightness of both LEDs. Quiet turns them of
 * Programming language: C
 * Associated parts: All [PSOC™ Edge MCU](https://www.infineon.com/products/microcontroller/32-bit-psoc-arm-cortex/32-bit-psoc-edge-arm) parts
 
-## Supported toolchains (make variable 'TOOLCHAIN')
-
-* GNU Arm® Embedded Compiler v14.2.1 ( GCC_ARM ) – Default value of TOOLCHAIN
-* Arm® Compiler v6.22 ( ARM )
-* IAR C/C++ Compiler v9.50.2 ( IAR )
-* LLVM Embedded Toolchain for Arm® v19.1.5 ( LLVM_ARM )
-
-## Supported kits (make variable 'TARGET')
-
-* [PSOC™ Edge E84 Evaluation Kit](https://www.infineon.com/KIT_PSE84_EVAL) ( KIT_PSE84_EVAL_EPC2 ) – Default value of TARGET
-* [PSOC™ Edge E84 Evaluation Kit](https://www.infineon.com/KIT_PSE84_EVAL) ( KIT_PSE84_EVAL_EPC4 )
-* [PSOC™ Edge E84 AI Kit](https://www.infineon.com/KIT_PSE84_AI) ( KIT_PSE84_AI )
-* [PSOC™ Edge E84 HMI Kit](https://www.infineon.com/KIT_PSE84_HMI) ( KIT_PSE84_HMI )
-
-## Hardware setup
-
-This example uses the board's default configuration. See the kit user guide to ensure that the board is configured correctly.
 
 Ensure the following jumper and pin configuration on board.
 
